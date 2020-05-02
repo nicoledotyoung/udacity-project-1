@@ -4,11 +4,16 @@
     <head>
         <meta charset="utf-8">
         <title>The Road Room</title>
-
+        <!-- STYLESHEETS -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <!-- FOR MEDIA QUERIES -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
             integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        <!-- GOOGLE -->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat&display=swap" rel="stylesheet">
         <meta name="theme-color" content="#fafafa">
     </head>
 
@@ -17,26 +22,31 @@
         <div class="main-grid">
 
             <header>
-                <div class="title">
-                    <h1>The Road Room</h1>
-                    <!--This may need to be an svg-->
+                <div class="content-wrapper">
+
+                    <div class="title">
+                        <!--This may need to be an svg-->
+                        <h1>The Road Room</h1>
+
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="blog-post/index.html">Blog</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <!-- *********** NEEDS LINKS **************** -->
-                <nav>
-                    <ul>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Blog</a></li>
-                    </ul>
-                </nav>
             </header>
 
             <main>
+
                 <!-- HERO IMAGE -->
 
                 <section class="hero">
                     <div class="content-wrapper">
                         <h2>
-                            Explore.
+                            Explore
                         </h2>
                     </div>
                 </section>
@@ -44,43 +54,61 @@
                 <!-- RECENT POSTS CARDS AREA -->
 
                 <section class="recent-posts">
+
                     <div class="content-wrapper">
+
                         <div class="section-heading">
                             <h2>Recent Posts</h2>
                         </div>
+
                         <div class="cards-area">
+
                             <div class="card" id="card1">
-                                <a href="blog-post/index.html">
-                                    <figure class="card-img"><img src="img/van-img.jpg" alt="blog1"></figure>
+                                <figure class="card-img"><img src="img/van-img.jpg" alt="blog1"></figure>
+                                <div class="card-info">
                                     <p class="card-date">May 5, 2020</p>
                                     <h3 class="card-title">Prioritizing Rest</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    <p class="blog-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed
+                                        do eiusmod tempor
                                         incididunt
                                         ut labore et dolore magna
                                         aliqua...</p>
-                                </a>
+                                    <p class="button" id="read-more"><a href="blog-post/index.html">Read More</a></p>
+                                </div>
                             </div>
+
                             <div class="card" id="card2">
                                 <figure class="card-img"><img src="img/mindful.jpg" alt="blog2"></figure>
-                                <p class="card-date">April 30, 2020</p>
-                                <h3 class="card-title">Mindful Travel</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna
-                                    aliqua. Velit euismod in pellentesque massa placerat duis ultricies lacus. Cras
-                                    tincidunt
-                                    lobortis feugiat vivamus...</p>
+                                <div class="card-info">
+                                    <p class="card-date">April 30, 2020</p>
+                                    <h3 class="card-title">Mindful Travel</h3>
+                                    <p class="blog-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                        do
+                                        eiusmod tempor
+                                        incididunt
+                                        ut labore et dolore magna
+                                        aliqua. Velit euismod in pellentesque massa placerat duis ultricies lacus...</p>
+                                    <p class="button" id="read-more"><a href="#">Read More</a></p>
+                                </div>
                             </div>
+
                             <div class="card" id="card3">
                                 <figure class="card-img"><img src="img/card3.jpg" alt="blog3"></figure>
-                                <p class="card-date">Feb 25, 2020 </p>
-                                <h3 class="card-title">Van Couple Probs</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna
-                                    aliqua...</p>
+                                <div class="card-info">
+                                    <p class="card-date">Feb 25, 2020 </p>
+                                    <h3 class="card-title">Van Couple Probs</h3>
+                                    <p class="blog-preview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                        do
+                                        eiusmod tempor
+                                        incididunt
+                                        ut labore et dolore magna
+                                        aliqua...</p>
+                                    <p class="button" id="read-more"><a href="#">Read More</a></p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="button-area">
                             <p class="button"><a href="#">Back To Top</a></p>
                         </div>
@@ -97,7 +125,9 @@
                     <!-- SOCAIL LINKS -->
 
                     <div class="social-info">
+
                         <h5>Social</h5>
+
                         <div class="social-links">
                             <p>
                                 <i class="fab fa-facebook-f"></i>
@@ -111,7 +141,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- COPYRIGHT -->
+
                 <div class="copyright">
                     <h6>Copyright 2020</h6>
                 </div>

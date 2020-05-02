@@ -28,60 +28,60 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* ===================== MAIN STYLES ===================== */
+/* ===================== BASE STYLES ===================== */
 
- body{
-  margin: 0;
-  font-size: 16px;
-  color: #666;
-}
-h1 {
-  font-size: 4em;
-}
-h2 {
-  font-size: 3.75em;
+body{
+margin: 0;
+font-size: 16px;
+color: #666;
+font-family: "Monserrat", sans-serif; 
 }
 
-h3 {
-  font-size: 3em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
 }
 
- .main-grid{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 100%;
-    /* grid-template-rows: 200px 250px 1fr 150px; */
-    grid-template-areas: 
-    
-    "hd"
-    "hero"
-    "blogs"
-    "ft";
-    grid-auto-rows: auto;
+/* HOMEPAGE GRID */
+
+.main-grid{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  
+  "hd"
+  "hero"
+  "blogs"
+  "ft";
+  grid-auto-rows: auto;
 }
 
-/* .content-wrapper {
-  width: 90%;
-} */
 
-/* button styles*/
+/* BUTTON STYLES*/
+
 .button {
+  font-family: "Monserrat", sans-serif;
   border: solid 1px #1e1e1e;
   border-radius: 16px;
   background-color: inherit;
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   display: inline-block;
 }
 
 .button:hover {
+  font-family: "Monserrat", sans-serif;
   border: none;
   border-radius: 16px;
   background-color: #1e1e1e;
-  
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 1em;
   cursor: pointer;
   display: inline-block;
 }
@@ -104,46 +104,68 @@ header {
   grid-area: hd;
   background-color: #6EB5C3;
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
   color: #fffff8;
-
 }
+
+header .content-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+header .title {
+  width: 100%;
+  max-height: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 header h1 {
   margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
 }
+
 header nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+header nav ul {
   width: 50%;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
 }
 
-header nav ul {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-flow: row wrap;
-}
-
 header nav ul li {
-  width: 30%;
+  width: 50%;
   list-style: none;
-  text-align: right;
-  
-  
+  text-align: center;
 }
 
 header nav ul li a {
   text-decoration: none;
-  font-size: 2.5em;
+  font-size: 1.25em;
   color: #fffff8;
-  
+  font-family: "Monserrat", sans-serif;
+  font-weight: 400;
 }
 
 /* ===================== HOMEPAGE: HERO STYLES ===================== */
@@ -152,36 +174,34 @@ header nav ul li a {
   background-image: url(../img/hero.jpg);
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
+}
+
+
+.hero h2 {
+  margin: 0;
   color: #fffff8;
   text-transform: uppercase;
   text-shadow: 3px 3px 8px #1e1e1e;
   letter-spacing: .75em;
-}
-.hero .content-wrapper{
-  /* display: flex;
-  justify-content: center;
-  align-content: center;
-   */
-}
-
-.hero .content-wrapper h2 {
-  margin: 0;
-  /* font-size: 1.625em; */
 }
 
 /* ===================== HOMEPAGE: RECENT POSTS STYLES ===================== */
 
 .recent-posts {
   grid-area: blogs;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
 }
 .recent-posts .content-wrapper {
   width: 90%;
-  margin: 5%;
+  margin: 20px 0;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -200,12 +220,11 @@ header nav ul li a {
 
 .recent-posts .cards-area {
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
 }
 
 
+
+/* ====================== FOOTER STYLES ======================== */
 
 footer {
   grid-area: ft;
@@ -216,7 +235,6 @@ footer {
   justify-content: center;
   align-content: center;
   flex-flow: row wrap;
-  
 }
 
 footer .content-wrapper {
@@ -226,8 +244,8 @@ footer .content-wrapper {
   align-content: center;
   flex-flow: row wrap;
   text-align: center;
-
 }
+
 .social-info {
   width: 100%;
   display: flex;
@@ -236,10 +254,6 @@ footer .content-wrapper {
   flex-flow: row wrap;
   text-align: center;
 }
-/* .social-info h5 {
-  width: 100%;
-  font-size: 3em;
-} */
 
 .social-info .social-links {
   width: 100%;
@@ -247,9 +261,8 @@ footer .content-wrapper {
   justify-content: space-between;
   align-content: center;
   flex-flow: row wrap;
-  font-size: 2em;
-  margin: 10px;
-  
+  font-size: 1.5em;
+  margin: 10px 0;
 }
 
 .social-info .social-links p {
@@ -258,16 +271,20 @@ footer .content-wrapper {
 
 footer .copyright {
   width: 100%;
-  margin: 10px;
+  margin: 0 10px 10px;
 }
 
 .copyright h6 {
   margin: 0;
 }
+
 footer .content-wrapper .social-info h5 {
   width: 100%;
-  font-size: 2em;
-  margin: 20px  0 ;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 10px  0 ;
+  letter-spacing: .25em;
 }
 
 
@@ -363,15 +380,204 @@ footer .content-wrapper .social-info h5 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  @media only screen and (min-width: 600px) {
+    
+    /* ================== homepage ====================== */
+
+    /* header */
+
+    header {
+      height: 100px;
+    }
+
+    header .title {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      flex-flow: row wrap;
+    }
+   
+    header nav {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-content: center;
+      flex-flow: row wrap;
+    }
+
+    header nav ul {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      flex-flow: row wrap;
+    }
+
+
+  /*  recents blogs  */
+
+  .recent-posts .cards-area .card {
+    width: 40%;
+    margin: 20px 10px;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  /* cards */
+
+  .card h3 {
+      font-size: 1.125em;
+  }
+
+  .card .blog-preview  {
+      font-size: 1em;
+  }
+  
+    /* reordering so that the longer one comes last and doesnt mess up the view. 
+    alternative could be to hid the button so that they are all the same height 
+    but that leaves a bit of extra whitespace on some */
+    
+  #card2 {
+    order: 3;
+  }
+   
+     /* =======================  BLOG POST STYLES ========================= */
+
+    /* content */
+
+    .blog .blog-content {
+      width: 70%;
+    }
+    
+    /* aside: author info */
+
+    aside figure img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .author-contact {
+      width: 60%;
+      margin-left: 20px;
+    }
+
+    .author-contact h3 {
+      text-align: left;
+    }
+
+    .author-contact p {
+      text-align: left;
+    }
+  }
+
+ @media only screen and (min-width: 900px) {
+
+  /* ================== homepage ====================== */
+
+    header {
+      height: 60px;
+    }
+
+    /* hero area */
+
+    .hero {
+      height: 500px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+    }
+
+    /* cards */
+
+  .recent-posts .cards-area .card {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .recent-posts .cards-area .card figure {
+    width: 50%;
+    margin: 0;
+  }
+
+  .card .card-info {
+    width: 40%;
+  }
+
+  footer {
+    justify-content: flex-start;
+  }
+
+  footer .content-wrapper {
+    justify-content: flex-start;
+  }
+
+  footer .content-wrapper .social-info{
+    width: 50%;
+    text-align: left;
+    margin: 0 10px;
+    justify-content: flex-start;
+  }
+
+  footer .social-info .social-links {
+    width: 60%;
+    font-size: 1em;
+  }
+  
+  footer .content-wrapper .social-info h5 {
+   font-size: .75em;
+  }
+
+  /* =======================  BLOG POST STYLES ========================= */
+
+  .blog-grid {
+    
+    grid-template-areas: 
+    "aside content content content content content content content"
+    ;
+  }
+
+  
+  /* content */
+    .blog .content-wrapper {
+      justify-content: center;
+    }
+
+    .blog .blog-content {
+      width: 70%;
+    }
+    
+    /* aside: author info */
+
+    aside {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-flow: column wrap;
+      padding-top: 100px;
+    }
+
+    aside figure img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .author-contact {
+      width: 80%;
+      margin: 0;
+    }
+
+    .author-contact h3 {
+      text-align: left;
+      font-size: smaller;
+    }
+
+    .author-contact p {
+      text-align: left;
+      font-size: smaller;
+    }
 }
 
 /* ==========================================================================
@@ -386,7 +592,7 @@ footer .content-wrapper .social-info h5 {
   *:after {
     background: transparent !important;
     color: #000 !important;
-    /* Black prints faster */
+    Black prints faster
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -400,10 +606,10 @@ footer .content-wrapper .social-info h5 {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  /*
+  
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
-     */
+    
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -437,5 +643,5 @@ footer .content-wrapper .social-info h5 {
   h3 {
     page-break-after: avoid;
   }
-}
+} */
 
