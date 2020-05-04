@@ -533,7 +533,7 @@ footer .content-wrapper .social-info h5 {
   /* =======================  BLOG POST STYLES ========================= */
 
   .blog-grid {
-    
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-areas: 
     "aside content content content content content content content"
     ;
